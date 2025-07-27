@@ -31,7 +31,7 @@ function Stripes() {
   ];
 
   return (
-    <div className="flex items-center mt-12 overflow-hidden">
+    <div className="flex items-center mt-17 overflow-hidden">
       {data.map((elem, index) => (
         <Stripe key={index} direction={index===0 ? "left" : "right"} val={elem} />
       ))}
