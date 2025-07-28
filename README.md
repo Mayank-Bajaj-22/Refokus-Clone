@@ -2,7 +2,7 @@
 This project features a beautifully animated, interactive button built with React, Tailwind CSS, and Framer Motion. It showcases smooth hover effects where text slides in from the bottom and an arrow icon glides subtly to the right, creating a sleek UI experience inspired by modern design agencies like Obys.
 
 ## 🎥 Preview -
-[Live Preview]()
+[Live Preview](https://refokus-clone-nc4t.vercel.app/)
 
 ## Features -
 - Dual text animation — Text slides up smoothly on hover, replacing itself with the same content.
