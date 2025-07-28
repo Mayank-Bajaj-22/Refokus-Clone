@@ -1,5 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./Product";
+import { motion } from "framer-motion";
+import arqitel from "../assets/arqitel.mp4";
+import ttr from "../assets/ttr.mp4";
+import yir from "../assets/yir.mp4";
+import yahoo from "../assets/yahoo.mp4";
+import rainfall from "../assets/rainfall.mp4";
+import jungle from "../assets/jungle.mp4";
+import silvr from "../assets/silvr.mp4";
+import remind from "../assets/remind.mp4";
+import summon from "../assets/summon.mp4";
+import weglotlikemagic from "../assets/weglotlikemagic.mp4";
+import rocketchat from "../assets/rocketchat.mp4";
+import yir2021 from "../assets/yir2021.mp4";
+import weglot from "../assets/weglot.mp4";
+import showcase from "../assets/showcase.mp4";
 
 function Products() {
   var products = [
@@ -109,7 +124,7 @@ function Products() {
       case: false,
     },
     {
-      title: "Showcasse",
+      title: "Showcase",
       description:
         "Our OMR22 Masterclass teaches how to create a showcase website, and we made a showcase website to promote the art of showcasing.",
       live: true,
@@ -117,11 +132,233 @@ function Products() {
     },
   ];
 
+  const [pos, setPos] = useState(0);
+  const mover = (val) => {
+    setPos(val * 23);
+  };
+
   return (
-    <div className="mt-20">
+    <div className="mt-20 relative">
       {products.map((val, index) => (
-        <Product key={index} val={val} />
+        <Product key={index} val={val} mover={mover} count={index} />
       ))}
+      <div className="absolute w-full h-full top-0 pointer-events-none">
+        <motion.div
+          initial={{ y: pos, x: "-50%" }}
+          animate={{ y: pos + `rem` }}
+          transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.3 }}
+          className="w-[30rem] h-[23rem] left-[45%] rounded-3xl absolute overflow-hidden"
+        >
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={arqitel}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={ttr}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={yir}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={yahoo}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={rainfall}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={jungle}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={silvr}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={remind}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={summon}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={weglotlikemagic}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={rocketchat}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={ttr}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={yir2021}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={weglot}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={rainfall}
+            ></video>
+          </motion.div>
+          <motion.div
+            animate={{ y: -pos + `rem` }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <video
+              className="absolute object-cover rounded-3xl"
+              autoPlay
+              muted
+              loop
+              src={showcase}
+            ></video>
+          </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }
