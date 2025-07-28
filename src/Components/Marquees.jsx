@@ -34,6 +34,7 @@ function Marquees() {
         <Marquee
           key={index}
           imagesurls={item}
+          direction={index===0 ? "left" : "right"}
         />
       ))}
     </div>
