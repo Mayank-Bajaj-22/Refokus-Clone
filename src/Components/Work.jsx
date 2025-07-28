@@ -36,7 +36,7 @@ function Work() {
     },
     {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0af108a465002975acd_Showcase%20Websites%20(1).png",
-      top: "65%",
+      top: "75%",
       left: "55%",
       isActive: false,
     },
@@ -58,31 +58,31 @@ function Work() {
       Math.floor(data * 100) //the *100 is to make it percent
     ) {
       case 0:
-        imagesShow([]);
-        break;
-      case 1:
         imagesShow([0]);
         break;
-      case 2:
+      case 1:
         imagesShow([0, 1]);
         break;
-      case 3:
+      case 2:
         imagesShow([0, 1, 2]);
         break;
-      case 4:
+      case 3:
         imagesShow([0, 1, 2, 3]);
         break;
-      case 6:
+      case 4:
         imagesShow([0, 1, 2, 3, 4]);
         break;
-      case 8:
+      case 5:
         imagesShow([0, 1, 2, 3, 4, 5]);
         break;
+      // case 6:
+      //   imagesShow([0, 1, 2, 3, 4, 5]);
+      //   break;
     }
   });
 
   return (
-    <div className="w-full mt-5 relative">
+    <div className="w-full mt-10 relative">
       <div className="max-w-screen-xl mx-auto text-center">
         <h1 className="text-[35vw] leading-none font-medium select-none">
           work
@@ -95,7 +95,7 @@ function Work() {
               elem.isActive && (
                 <img
                   key={index}
-                  className="absolute w-60 rounded-lg -translate-x-[50%] -translate-y-[50%]"
+                  className="absolute w-60 rounded-lg -translate-x-[50%] -translate-y-[40%]"
                   style={{ top: elem.top, left: elem.left }}
                   src={elem.url}
                   alt="work_images"
